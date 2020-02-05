@@ -14,6 +14,7 @@ No arguments are required to run this program.
 
 //Creates an empty board for the TicTacToe game to be played on
 void CreateBoard(char game_board[3][3]);
+void DisplayBoard(char game_board[3][3]);
 
 //Prints the board to the screen so players can see it
 void DisplayBoard(char game_board[3][3]);
