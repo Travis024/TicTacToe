@@ -42,7 +42,6 @@ void CreateBoard(char game_board[3][3]){
 
 }
 
-
 /*
 Prints the board to the screen so players can see it
 
@@ -58,4 +57,6 @@ void DisplayBoard(char game_board[3][3]){
 	std::cout << " " << game_board[1][0] << " " << "|" << " " << game_board[1][1] << " " << "|" << " " << game_board[1][2] << " " << "\n";
 	std::cout << "---|---|---" << "\n";
 	std::cout << " " << game_board[2][0] << " " << "|" << " " << game_board[2][1] << " " << "|" << " " << game_board[2][2] << " " << "\n";
+
+
 }
