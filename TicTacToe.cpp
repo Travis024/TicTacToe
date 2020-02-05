@@ -14,10 +14,12 @@ No arguments are required to run this program.
 
 //Creates an empty board for the TicTacToe game to be played on
 void CreateBoard(char game_board[3][3]);
+void DisplayBoard(char game_board[3][3]);
 
 int main(){
   char game_board[3][3];
   CreateBoard(game_board);
+  DisplayBoard(game_board);
 }
 
 
@@ -34,5 +36,19 @@ void CreateBoard(char game_board[3][3]){
       game_board[i][j] = '-';
     }
   }
+
+}
+
+void DisplayBoard(char game_board[3][3]){
+
+std::cout << "\n";
+
+std::cout << " " << "Empty" << " " << "|" << " " << "Empty" << " " << "|" << " " << "Empty" << " " << "\n";
+std::cout << "---|---|---" << "\n";
+std::cout << " " << "Empty" << " " << "|" << " " << "Empty" << " " << "|" << " " << "Empty" << " " << "\n";
+std::cout << "---|---|---" << "\n";
+std::cout << " " << "Empty" << " " << "|" << " " << "Empty" << " " << "|" << " " << "Empty" << " " << "\n";
+
+
 
 }
