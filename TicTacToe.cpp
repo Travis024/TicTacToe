@@ -15,6 +15,7 @@ No arguments are required to run this program.
 //Creates an empty board for the TicTacToe game to be played on
 void CreateBoard(char game_board[3][3]);
 void DisplayBoard(char game_board[3][3]);
+void PlaceMarker(char game_board[3][3], std::string location, char marker);
 
 //Prints the board to the screen so players can see it
 
@@ -23,7 +24,9 @@ int main(){
   char game_board[3][3];
   CreateBoard(game_board);
   DisplayBoard(game_board);
-  GetPlayerChoice();
+  std::string test_choice = GetPlayerChoice();
+  PlaceMarker(game_board, test_choice, 'X');
+  DisplayBoard(game_board);
 }
 
 
@@ -68,4 +71,28 @@ std::string GetPlayerChoice(){
 	std::cin >> string_choice;
 
 	return string_choice;
+}
+
+void PlaceMarker(char game_board[3][3], std::string location, char marker){
+
+  if(location == "1"){
+    game_board[0][0] = marker;
+  }else if(location == "2"){
+    game_board[0][1] = marker;
+  }else if(location == "3"){
+    game_board[0][2] = marker;
+  }else if(location == "4"){
+    game_board[1][0] = marker;
+  }else if(location == "5"){
+    game_board[1][1] = marker;
+  }else if(location == "6"){
+    game_board[1][2] = marker;
+  }else if(location == "7"){
+    game_board[2][0] = marker;
+  }else if(location == "8"){
+    game_board[2][1] = marker;
+  }else{
+    game_board[2][2] = marker;
+  }
+
 }
