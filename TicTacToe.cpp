@@ -16,6 +16,7 @@ No arguments are required to run this program.
 void CreateBoard(char game_board[3][3]);
 void DisplayBoard(char game_board[3][3]);
 void PlaceMarker(char game_board[3][3], std::string location, char marker);
+bool CheckWin(char game_board[3][3]);
 
 //Prints the board to the screen so players can see it
 
@@ -27,6 +28,16 @@ int main(){
   std::string test_choice = GetPlayerChoice();
   PlaceMarker(game_board, test_choice, 'X');
   DisplayBoard(game_board);
+  test_choice = GetPlayerChoice();
+  PlaceMarker(game_board, test_choice, 'X');
+  DisplayBoard(game_board);
+  test_choice = GetPlayerChoice();
+  PlaceMarker(game_board, test_choice, 'X');
+  DisplayBoard(game_board);
+
+  if(CheckWin(game_board)){
+    std::cout<<"Done!"<<"\n";
+  }
 }
 
 
@@ -93,6 +104,30 @@ void PlaceMarker(char game_board[3][3], std::string location, char marker){
     game_board[2][1] = marker;
   }else{
     game_board[2][2] = marker;
+  }
+
+}
+
+bool CheckWin(char game_board[3][3]){
+
+  if((game_board[0][0] == game_board[0][1]) && (game_board[0][0] == game_board[0][1])){
+    return true;
+  }else if((game_board[1][0] == game_board[0][1]) && (game_board[1][1] == game_board[1][2])){
+    return true;
+  }else if((game_board[2][0] == game_board[2][1]) && (game_board[2][0] == game_board[2][2])){
+    return true;
+  }else if((game_board[0][0] == game_board[1][0]) && (game_board[0][0] == game_board[2][0])){
+    return true;
+  }else if((game_board[1][0] == game_board[1][1]) && (game_board[1][0] == game_board[1][2])){
+    return true;
+  }else if((game_board[2][0] == game_board[2][1]) && (game_board[2][0] == game_board[2][2])){
+    return true;
+  }else if((game_board[0][0] == game_board[1][1]) && (game_board[0][0] == game_board[2][2])){
+    return true;
+  }else if((game_board[0][2] == game_board[1][1]) && (game_board[0][2] == game_board[2][0])){
+    return true;
+  }else{
+    return false;
   }
 
 }
