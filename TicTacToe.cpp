@@ -1,11 +1,12 @@
 /*
-Travis Torline and Chris Gilbert
+Travis Torline and Chris McCarroll-Gilbert
 
-This program creates a simple two-player game to Tic-Tac-Toe
-Users are asked to input the desired location of their mark
+This program creates a simple two-player game of Tic-Tac-Toe
+Users are asked to input the desired location of their marker
 A winner is determined by who gets three in a row
+If the board is filled up with no three in a row, the game is a tie.
 
-No arguments are required to run this program.
+No arguments are required to run this program. Type make and then ./TicTacToe
 */
 
 #include <iostream>
@@ -28,15 +29,20 @@ void PlaceMarker(char game_board[3][3], std::string location, char marker);
 bool CheckWin(char game_board[3][3]);
 
 int main(){
+
+  //The game loop begins by creating an empty board to play on
   char game_board[3][3];
   CreateBoard(game_board);
 
-  bool continueGame = false;
+  bool continue_game = false;
   char marker = 'X';
   std::string player_choice;
   int counter = 0;
 
-  while(!continueGame && counter < 9){
+  //If continue_game is true, a winner has been found. If the counter is equalt o 9, it must be a tie
+  while(!continue_game && counter < 9){
+
+    //Each iteration displays the board, askes the player to mark a spot, updates the board, and then checks for a winner
     DisplayBoard(game_board);
     player_choice = GetPlayerChoice();
     PlaceMarker(game_board, player_choice, marker);
@@ -47,7 +53,7 @@ int main(){
       marker = 'X';
     }
 
-    continueGame = (CheckWin(game_board));
+    continue_game = (CheckWin(game_board));
     counter++;
   }
 
@@ -107,8 +113,6 @@ std::string GetPlayerChoice(){
 	std::string string_choice;
 	std::cout << "Enter a position between 1-9 to place your marker: " << std::endl;
 	std::cin >> string_choice;
-
-
 
 	return string_choice;
 }
