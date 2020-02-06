@@ -1,0 +1,129 @@
+GAME WITH WINNER-------------------------------------------------------------
+ - | - | - 
+---|---|---
+ - | - | - 
+---|---|---
+ - | - | - 
+Enter a position between 1-9 to place your marker: 
+1
+
+ X | - | - 
+---|---|---
+ - | - | - 
+---|---|---
+ - | - | - 
+Enter a position between 1-9 to place your marker: 
+7
+
+ X | - | - 
+---|---|---
+ - | - | - 
+---|---|---
+ O | - | - 
+Enter a position between 1-9 to place your marker: 
+9
+
+ X | - | - 
+---|---|---
+ - | - | - 
+---|---|---
+ O | - | X 
+Enter a position between 1-9 to place your marker: 
+3
+
+ X | - | O 
+---|---|---
+ - | - | - 
+---|---|---
+ O | - | X 
+Enter a position between 1-9 to place your marker: 
+5
+
+ X | - | O 
+---|---|---
+ - | X | - 
+---|---|---
+ O | - | X 
+Game over! We have a winner!
+
+
+GAME WITH TIE----------------------------------------------------------------
+ - | - | - 
+---|---|---
+ - | - | - 
+---|---|---
+ - | - | - 
+Enter a position between 1-9 to place your marker: 
+1
+
+ X | - | - 
+---|---|---
+ - | - | - 
+---|---|---
+ - | - | - 
+Enter a position between 1-9 to place your marker: 
+4
+
+ X | - | - 
+---|---|---
+ O | - | - 
+---|---|---
+ - | - | - 
+Enter a position between 1-9 to place your marker: 
+5
+
+ X | - | - 
+---|---|---
+ O | X | - 
+---|---|---
+ - | - | - 
+Enter a position between 1-9 to place your marker: 
+2
+
+ X | O | - 
+---|---|---
+ O | X | - 
+---|---|---
+ - | - | - 
+Enter a position between 1-9 to place your marker: 
+6
+
+ X | O | - 
+---|---|---
+ O | X | X 
+---|---|---
+ - | - | - 
+Enter a position between 1-9 to place your marker: 
+3
+
+ X | O | O 
+---|---|---
+ O | X | X 
+---|---|---
+ - | - | - 
+Enter a position between 1-9 to place your marker: 
+7
+
+ X | O | O 
+---|---|---
+ O | X | X 
+---|---|---
+ X | - | - 
+Enter a position between 1-9 to place your marker: 
+8
+
+ X | O | O 
+---|---|---
+ O | X | X 
+---|---|---
+ X | O | - 
+Enter a position between 1-9 to place your marker: 
+9
+
+ X | O | O 
+---|---|---
+ O | X | X 
+---|---|---
+ X | O | X 
+It's a tie!
+

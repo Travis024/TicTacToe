@@ -34,8 +34,9 @@ int main(){
   bool continueGame = false;
   char marker = 'X';
   std::string player_choice;
+  int counter = 0;
 
-  while(!continueGame){
+  while(!continueGame && counter < 9){
     DisplayBoard(game_board);
     player_choice = GetPlayerChoice();
     PlaceMarker(game_board, player_choice, marker);
@@ -47,10 +48,16 @@ int main(){
     }
 
     continueGame = (CheckWin(game_board));
+    counter++;
   }
 
   DisplayBoard(game_board);
-  std::cout<<"Game over! We have a winner!"<<"\n";
+
+  if(counter == 9){
+    std::cout<<"It's a tie!"<<"\n";
+  }else{
+    std::cout<<"Game over! We have a winner!"<<"\n";
+  }
 
 }
 
@@ -100,6 +107,8 @@ std::string GetPlayerChoice(){
 	std::string string_choice;
 	std::cout << "Enter a position between 1-9 to place your marker: " << std::endl;
 	std::cin >> string_choice;
+
+
 
 	return string_choice;
 }
@@ -151,9 +160,9 @@ bool CheckWin(char game_board[3][3]){
     return true;
   }else if((game_board[0][0] == game_board[1][0]) && (game_board[0][0] == game_board[2][0]) && (game_board[0][0] != '-')){
     return true;
-  }else if((game_board[1][0] == game_board[1][1]) && (game_board[1][0] == game_board[1][2]) && (game_board[1][0] != '-')){
+  }else if((game_board[0][1] == game_board[1][1]) && (game_board[0][1] == game_board[2][1]) && (game_board[0][1] != '-')){
     return true;
-  }else if((game_board[2][0] == game_board[2][1]) && (game_board[2][0] == game_board[2][2]) && (game_board[2][0] != '-')){
+  }else if((game_board[0][2] == game_board[1][2]) && (game_board[0][2] == game_board[2][2]) && (game_board[0][2] != '-')){
     return true;
   }else if((game_board[0][0] == game_board[1][1]) && (game_board[0][0] == game_board[2][2]) && (game_board[0][0] != '-')){
     return true;
